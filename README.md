@@ -1,6 +1,7 @@
-# poc-simple-app
+# Poc Simple App
 Essa poc tem como objetivo apresentar a utilização do Github Actions de forma inicial.
 
+# Conteúdo
 
 Para melhor estruturação, esse tutorial foi dividido em 5 módulos:
  - Modulo1 - Funcionamento dos Secrets
