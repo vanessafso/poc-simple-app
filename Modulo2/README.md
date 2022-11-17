@@ -1,0 +1,1 @@
+# Configuração de credenciais de acesso no GCP
