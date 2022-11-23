@@ -28,6 +28,7 @@ jobs:
       env:
         MODULO: ${{ env.MODULO }}
         NAME: ${{ env.NAME }}
+        LAST_NAME: ${{ secrets.LAST_NAME }}
       with:
         input: "${{ github.workspace }}/.github/manifests/template.yaml"
         output: file.yaml

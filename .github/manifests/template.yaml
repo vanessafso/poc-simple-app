@@ -2,4 +2,4 @@ Template do Módulo $MODULO
 
 Welcome to Github Actions
 
-Your name: $NAME
+Your name: $NAME $LAST_NAME

@@ -41,3 +41,26 @@ Para criar um secret execute os passos:
 6. Coloque como valor desse secret o seu sobrenome
 
 7. Clique em **Add secret**
+
+
+No arquivo *workshop.yml* declare o secret que acabou de criar no seguinte step:
+
+```
+    - name: Replace Variables
+      uses: danielr1996/envsubst-action@1.1.0
+      env:
+        MODULO: ${{ env.MODULO }}
+        NAME: ${{ env.NAME }}
+        LAST_NAME: ${{ secrets.LAST_NAME }}
+      with:
+        input: "${{ github.workspace }}/.github/manifests/template.yaml"
+        output: file.yaml
+```
+
+No arquivo *template.yaml* faça a inclusão da nova variável:
+
+```
+Your name: $NAME $LAST_NAME
+```
+
+OBS: Faça essa alteração em um commit só para que não seja gasto os minutos gratis disponibilizados pelo Github. Se possível utilize uma IDE como Visual Studio Code.
