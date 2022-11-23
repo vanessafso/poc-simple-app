@@ -64,3 +64,5 @@ Your name: $NAME $LAST_NAME
 ```
 
 OBS: Faça essa alteração em um commit só para que não seja gasto os minutos gratis disponibilizados pelo Github. Se possível utilize uma IDE como Visual Studio Code.
+
+Feito commit e push, verifique o resultado no step de commands a aba de Actions. Você verá algo como: 
