@@ -30,7 +30,7 @@ Para criar um secret execute os passos:
 1. Na interface do Github navegue até a pagina principal do repositório
 
 2. Abaixo do nome do repositório, clique em **Settings** 
-
+![image](https://user-images.githubusercontent.com/15251899/203456287-99c45ef9-1bfa-4d7a-9dcc-8462bad7903b.png)
 
 3. Na sessão "Security" do lado esquerdo, selecione **Secrets**, depois **Actions**
 
