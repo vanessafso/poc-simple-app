@@ -64,3 +64,53 @@ Your name: $NAME $LAST_NAME
 ```
 
 OBS: Faça essa alteração em um commit só para que não seja gasto os minutos gratis disponibilizados pelo Github. Se possível utilize uma IDE como Visual Studio Code.
+
+Feito commit e push, verifique o resultado no step de commands a aba de Actions. Você verá algo como: 
+![image](https://user-images.githubusercontent.com/15251899/203457262-46a5fcd0-e260-45d7-a655-3aa77b9c353d.png)
+
+Note que no lugar do secret adicionado apareceu \*\*\*. Isso ocorre devido a criptografia do Secrets, ou seja, usamos esse recurso para esconder valores de senhas, credenciais, URL's, etc, que não podem ser exibidas no código.
+
+Para corrigir essa demo e o valor desse parâmetro ser mostrado no log do Actions, faça essa alteração no secret para que ele se torne uma variável de ambiente:
+
+```
+name: First App
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  # Parameters
+  MODULO: 1
+  NAME: Vanessa
+  LAST_NAME: Fernandes
+
+jobs:
+  setup-build-publish-deploy:
+    name: First App
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+
+    - name: Replace Variables
+      uses: danielr1996/envsubst-action@1.1.0
+      env:
+        MODULO: ${{ env.MODULO }}
+        NAME: ${{ env.NAME }}
+        LAST_NAME: ${{ env.LAST_NAME }}
+      with:
+        input: "${{ github.workspace }}/.github/manifests/template.yaml"
+        output: file.yaml
+
+    - name: commands
+      run: |-
+        cat file.yaml
+```
+
