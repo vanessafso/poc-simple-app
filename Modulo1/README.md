@@ -17,6 +17,9 @@ Observe que no arquivo *workshop.yml* declaramos duas variáveis **$MODULO** e *
 
 Abra o bloco referente ao step *commands*:
 
+![image](https://user-images.githubusercontent.com/15251899/203454743-ff433af9-edcf-406c-b040-592756621348.png)
+
+Repare que as variáveis são substituidas como esperado. Agora altere o valor da variável **$NAME** e faça o commit. Assim que o repositório receber o novo push, será startado o pipeline.
 
 ### Secrets
 
