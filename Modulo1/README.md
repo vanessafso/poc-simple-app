@@ -5,8 +5,9 @@
 - Para o Github rodar o pipeline, é preciso ter uma pasta .github/workflows no diretório raiz:
 Foi incluído nesse workshop um diretório manifests para conter nosso arquivo de variáveis:
 
-
 Entendido o funcionamento dos diretórios necessários, vamos para o primeiro assunto do workshop, Secrets e variáveis de ambiente.
+
+### Variáveis de ambiente
 
 É possível criar variáveis de ambiente personalizadas em seu fluxo de trabalho no Github Actions. Dessa maneira, centralizamos as variáveis e não precisamos procura-las em cada trecho de código.
 Observe que no arquivo *workshop.yml* declaramos duas variáveis **$MODULO** e **$NAME**. Esse mesmos parametros são referenciados no arquivo *template.yaml*. Nesse primeiro momento entre na interface do Github e procure a aba Actions:
@@ -17,6 +18,23 @@ Observe que no arquivo *workshop.yml* declaramos duas variáveis **$MODULO** e *
 Abra o bloco referente ao step *commands*:
 
 
-
+### Secrets
 
 Secrets são variáveis de ambiente criptografadas que podem ser usadas em um repositório e estão disponíveis para uso em fluxos de trabalho do Github Actions.
+
+Para criar um secret execute os passos: 
+
+1. Na interface do Github navegue até a pagina principal do repositório
+
+2. Abaixo do nome do repositório, clique em **Settings** 
+
+
+3. Na sessão "Security" do lado esquerdo, selecione **Secrets**, depois **Actions**
+
+4. Clique em **New repository secret**
+
+5. Dê o nome de *LAST_NAME* na caixa de texto **Name**
+
+6. Coloque como valor desse secret o seu sobrenome
+
+7. Clique em **Add secret**
