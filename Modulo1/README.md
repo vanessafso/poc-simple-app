@@ -14,6 +14,9 @@ Observe que no arquivo *workshop.yml* declaramos duas variáveis **$MODULO** e *
 ![m1-1](https://user-images.githubusercontent.com/15251899/203454235-4e9f1abf-2246-473a-91e1-6b51dcb932f9.jpeg)
 
 
+Abra o bloco referente ao step *commands*:
+
+
 
 
 Secrets são variáveis de ambiente criptografadas que podem ser usadas em um repositório e estão disponíveis para uso em fluxos de trabalho do Github Actions.
